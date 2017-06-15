@@ -1,0 +1,61 @@
+{% extends "./base_site.html" %}
+{% load i18n static %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block content %}
+
+<div id="content-main">
+<table id="tb_title" width="100%">
+<tr><td><h1>Formation matu. prof. intégrée: plan d'études</h1></td>
+<td class="toggle"><a href="{% url  'index-fe' %}">> FE</a></td></tr></table>
+
+
+<table id="plan">
+<tr>
+	<th width="200px">Domaines</th>
+	<th width="450px">Situations</th>
+	<th width="40px">Form.</th>
+	<th width="40px">Sem.1</th>
+	<th width="40px">Sem.2</th>
+	<th width="40px">Sem.3</th>
+	<th width="40px">Sem.4</th>
+	<th width="40px">Sem.5</th>
+	<th width="40px">Sem.6</th>
+</tr>
+{% for d in object_list %}
+<tr>
+	<td class="l{{d.id}} d"  ><a href="#">{{ d.name }}</a></td>
+	<td class="l{{d.id}}" colspan="8" style="padding:0;">
+		<table class="tb_insert" >
+		{% for s in d.situation_set.all %}
+			<tr >
+				<td rowspan="2" style="width:430px;"  ><a href="#">{{ s.code }} - {{ s.name }}</a></td>
+				
+				<td style="width:40px; padding:10px; ">Cours</td>
+				{% for c in s.get_cours %}
+					<td class ="r" >{% if c == 0 %} &nbsp; {% else %} {{ c }} pér. {% endif %}</td>
+				{% endfor %}
+				</tr>
+				<tr>
+				<td style="width:40px; padding:10px; ">CIE</td>
+				{% for c in s.get_cie %}
+					<td class ="r" >{% if c == 0 %} - {% else %} {{ c }} j. {% endif %}</td>
+				{% endfor %}
+				</tr>
+				
+			</tr>
+			
+		{% endfor %}
+		</table>
+	</td>
+</tr>
+{% endfor %}
+
+</table>
+<br/>
+<p><a href="#">Fichier PDF</a></p>
+</div>
+{% endblock %}
+
+

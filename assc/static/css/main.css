@@ -1,0 +1,151 @@
+@CHARSET "UTF-8";
+
+.dashboard #content {
+	width:1200px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+/*
+table th, td {
+	font-size:115%;
+}
+*/
+
+/* BREADCRUMBS */
+
+div.breadcrumbs {
+    background: #79aec8;
+    padding: 15px 0px;
+    border: none;
+    font-size: 14px;
+    color: #c4dce8;
+    text-align: left;
+    
+}
+
+div.breadcrumbs ul {
+	text-indent: 0px;
+}
+
+div.breadcrumbs ul li {
+	line-height:0px;
+	text-indent:0px;
+	margin-left:0px;
+	padding-left:0px;
+	padding-right:30px;
+	float:left;
+	
+}
+
+div.breadcrumbs a {
+    color: #fff;
+}
+
+div.breadcrumbs a:focus, div.breadcrumbs a:hover {
+    color: #c4dce8;
+}
+
+#plan a:link {
+	color:black;
+}
+
+#plan a:visited {
+	color:black;
+}
+
+#plan a:hover {
+	text-decoration:underline;
+}
+
+#plan  {
+	border-collapse: separate;
+	border-spacing: 5px 6px;
+	margin:auto;
+}
+
+#plan  th {
+	font-size:110%;
+	text-align:center;
+}
+
+#plan .r {
+	
+	width:40px; 
+	padding:10px; 
+	text-align:center;
+}
+
+
+.tb_insert {
+	border-collapse: collapse;
+	border-spacing: 5px 6px;
+	margin:auto;
+	text-align:left;
+	width:100%;
+
+	
+}
+
+.l1, .l2, .l3, .l4, .l5 ,.l6, .l7, .l8, .l9, .l10{
+	border: 1px solid black;
+	padding:7px;
+	spacing:7px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	line-height:15px;
+	font-size:100%;
+
+}
+
+.d {
+	vertical-align:middle;
+	padding:10px;
+	font-size:120%;
+	font-weight:bold;
+}
+
+.l1 {	background-color:#fcaf3e;}
+.l2 {	background-color:#fa8072;}
+.l3 {	background-color:#ffd700;}
+.l4 {	background-color:#ad7fa8;}
+.l5 {	background-color:#729fcf;}
+.l6 {	background-color:#73d216;}
+.l7 {	background-color:#babdb6;}
+.l8 {	background-color:#ffffff;}
+.l9 {   background-color:#4BB5C1;}
+.l10{   background-color:#ccffeb;}
+
+#tb_periode .r {
+	text-align:right;
+}
+
+#tb_periode .n {
+	spacing:0;
+	padding:0;
+}
+
+#tb_periode .w {
+	width:250px;
+}
+
+#tb_title td, #tb_title th {
+	border:0;
+}
+#tb_title h1 {
+	font-size:180%;
+	width:95%;
+}
+#tb_title .toggle {
+	text-align:right;
+}
+#tb_title .toggle a {
+	
+	font-size:110%;
+	border:1px solid #79aec8;
+	padding: 2px 5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	background-color: #e6f2ff;
+}
